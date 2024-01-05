@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>{% block title %}{% endblock %}</title>
+        {% load static%}
+        <link rel="stylesheet" type="text/css" href="{% static 'home/site.css' %}" />
+        <script src="{% static 'js/dynamic.js' %}"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <!-- Bootstrap 5 JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <!-- Font Awesome 4-->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body onload="hideForm()">
+        <div class="navbar">
+            <a href="{% url 'home' %}" class="navbar_brand">Home</a>
+            <a href="{% url 'about' %}" class="navbar_item">About</a>
+            <a href="{% url 'project' %}" class="navbar_item">Projects</a>
+            <a href="{% url 'contact' %}" class="navbar_item">Say Hello</a>
+        </div>
+        <div class="body_content">
+            {% block content%}
+            {% endblock%}
+            <div class="footer">
+            <hr/>
+            <footer>
+               <p> Developed by:</p>
+                <p><strong>Paul Okweso</strong> </p><br>
+                <div class="container">
+                    <div class="row">
+                      <div class="col social-buttons">
+                      <a href="https://web.facebook.com/paul.okweso/" class="btn btn-social text-white btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+                      <a href="https://github.com/Okweso" class="btn btn-social text-white btn-github"><i class="fa fa-github"></i> GitHub</a>
+                      <a href="https://www.linkedin.com/in/paul-okweso-94933a230/" class="btn btn-social text-white btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a>
+                      <a href="" class="btn btn-social text-white btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+                    </div>
+                <p>&copy; 2023</p>
+            </footer>
+            </div>
+        </div>
+    </body>
+</html>

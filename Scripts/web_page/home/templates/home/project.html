@@ -1,0 +1,21 @@
+{% extends "home/layout.html" %}
+{% block title %}
+projects page
+{% endblock %}
+{% block content %}
+<table>
+    <tr>
+        <th class="t-head">Project Name</th>
+        <th class="t-head">Image/Link</th>
+        <th class="t-head">Description</th>
+    </tr>
+    {% for x in data %}
+
+    <tr>
+        <td class="t-data"><h1>{{ x.name }}</h1></td>
+        <td class="t-image"><a href="https://github.com/Okweso/Fourth-year-project-new-repo"><img src="{{ x.photo.url }}" alt="project image" width="200px"></a></td>
+        <td class="t-data"><h2>{{ x.describe }}</h2></td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,301 @@
+.message{
+    font-weight: 600;
+    color: blue;
+    font-size: x-large;
+
+}
+body{
+    background-color:midnightblue !important;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lightsteelblue;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding: 8px 5px 8px 5px;
+    width: 500px;
+    margin: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 25px;
+    
+}
+.navbar a:hover{
+    background-color: midnightblue;
+    border-radius: 5px;
+    border-width: 10px;
+    border-color: chartreuse;
+}
+.navbar a:visited{
+    color: brown;
+}
+.navbar_brand{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.navbar_item{
+    font-variant: small-caps;
+    margin: left;
+}
+.body_content{
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position:relative;
+    top: 55px;
+}
+#greet1{
+    font-size: 40px;
+    color: white;
+    position: relative;
+    left: 1px;
+    font-weight: bold;
+}
+#greet2{
+    font-size: 40px;
+    color: white;
+    position: relative;
+    left: 300px;
+    font-weight: bold;
+}
+#name{
+    font-size: 55px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    left: 200px;
+}
+#description{
+    font-size: 55px;
+    color: dimgray;
+    position: relative;
+    left: 300px;
+}
+@keyframes imageSlide{
+    0% {left: 900px;top: 0px;}
+    50% {left: 890px; top: 3px;}
+    100% {left: 880px; top: 6px;}
+}
+.image{
+    position: relative;
+    left: 900px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    animation-name: imageSlide;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: 7;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    position: absolute;
+}
+.footer{
+    
+    width: 100%;
+    height: 200px;
+    background-color: aqua;
+    text-align: center;
+}
+.about{
+    width: 600px;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:teal;
+    background-color:beige;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.slider{
+    width: 320px;
+    height: 40px;
+    border-width: 5px;
+    border-color: cadetblue;
+    border-radius: 2px;
+    background-color:antiquewhite;
+    margin: 10px;
+    color:dimgray;
+    font-weight: bold;
+    font-size: 15px;
+}
+.t-head{
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:indigo;
+    background-color: aliceblue;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+.t-data{
+    font-size: medium;
+    color:#ddd;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 60px;
+    padding-right: 60px;
+    
+}
+.t-data .t-image{
+    border: 1px solid #ddd;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+   
+}
+.t-data tr:nth-child(odd){
+    background-color: darkgray;
+}
+
+
+.btn.btn-social {
+    border: 0;
+     position: relative;
+     padding-left: 44px;
+     text-align: left;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+       margin: 5px;
+   }
+   .btn.btn-social :first-child {
+     position: absolute;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     width: 32px;
+     line-height: 43px;
+     font-size: 1.6em;
+     text-align: center;
+     border-right: 1px solid rgba(0,0,0,0.2);
+   }
+   
+   .btn.btn-social-icon {
+     position: relative;
+     padding-left: 44px;
+     text-align: left;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     height: 34px;
+     width: 34px;
+     padding-left: 0;
+     padding-right: 0;
+     margin-bottom: 4px;
+   }
+   .btn.btn-social-icon :first-child {
+     position: absolute;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     width: 32px;
+     line-height: 34px;
+     font-size: 1.6em;
+     text-align: center;
+     border-right: 1px solid rgba(0,0,0,0.2);
+     border: none;
+     text-align: center;
+     width: 100% !important;
+   }
+   
+   #btn1, #btn2{
+    border-radius: 10px;
+    background-color:chartreuse;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 30;
+   }
+   @keyframes Animate1 {
+    0% {width: 100px;}
+    100% {width: 140px;}
+}
+   #btn1:hover{
+    background-color: darkblue;
+    animation-name: Animate1;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+   }
+   #from_email, #sub, #messg{
+    color: black;
+    font-size: 25px;
+    background-color: bisque;
+    margin: 15px;
+    border-radius: 5px;
+   }
+   #messg{
+    width:400px;
+    height: 150px;
+   }
+   .Ok_message{
+    width: 350px;
+    height: 210px;
+    background-color: #c0c0c0;
+    position: fixed;
+    left: 550px;
+    top: 0px;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 4;
+    filter: none !important;
+   }
+   #btn3{
+    width: 60px;
+    height: 45px;
+    background-color: #778899;
+    position: relative;
+    left: 270px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+   }
+   #cv{
+    width: 200px;
+    height: 90px;
+    border-radius: 50px;
+    background-color: aliceblue;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 350px;
+    top: 130px;
+    animation-name: resume;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+   }
+   @keyframes resume{
+    0%{width: 200px; height: 90px; font-size: 40px;}
+    100%{width: 300px; height: 130px; font-size: 50px;}
+   }
