@@ -1,0 +1,33 @@
+{% extends "home/layout.html" %}
+{% block title %}
+home page
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col" style="font-weight: bold; margin-bottom: 15px;">
+        {% for dot in my_icon %}
+        <img src="{{ dot.call_icon.url }}" width="60px" height="55px" style="margin: 20px; margin-bottom: 5px; position: relative; left: 40%;">
+        {% endfor %}
+        {% for x in Mydetails %}
+            <div style="padding-top: 20px; padding-bottom: 70px; font-size: 25px;">Hello, nice to meet you. This is {{ x.my_name }}. I am a software developer. Developing user friendly software that will take your business to the next level is my hobby.</div>
+            {% for doc in my_doc %}
+                <a href="{{ doc.file.url }}" class="text-decoration-none" style="height: 90px; width: 200px; position: relative; left: 150px; background-color: aliceblue; padding: 10px; border-radius: 50px; font-size: 25px;"> My Resume</a>
+            {% endfor %}
+            </div>
+    
+        <div class="col">
+            
+            {% if x.my_image %}
+                <div class="image"><img src="{{ x.my_image.url }}"  style="width: 300px; height: 500px; padding: 10px;"></div>
+            {% else %}:
+                <p>the image does not exist</p>
+            {% endif %}
+            
+        {% endfor %}
+    </div>
+</div>
+</div>
+                
+        {% endblock %}
+        

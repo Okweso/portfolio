@@ -1,0 +1,52 @@
+{% extends "home/layout.html" %}
+{% block title %}
+About page
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="container" style="background-color:indigo; color: crimson; padding: 10px; border-radius: 50px; margin-top: 20px;">
+                <p class="text-center fs-2 fw-semibold font-monospace position-relative py-2 px-4 text-bg-secondary"> I am passionate about technology and how it can solve real-world problems. I enjoy learning the new technologies that come up. It is always my pride when I use technology to solve a problem in the society.</p>
+            </div>
+                
+                    <h1 class="text-center" style="margin: 28px;">My Technical Skillset</h1>
+
+                    <div class="container text-center">
+                        <div class="row">
+                          <div class="col">
+
+                            
+
+                          </div>
+                          <div class="col">
+
+                            
+                                {% for key, value in my_skills.items %}
+                                    
+                                    <div class="card text-bg-danger mb-3 d-block" style="max-width: 25rem;">
+                                        <div class="card-header"><h5>{{key}}</h5></div>
+                                        <div class="card-body">
+                                        <p class="card-text">{{value}}</p>
+                                        </div>
+                                    </div>
+                                
+                                    
+                                {% endfor %}
+                                
+
+                          </div>
+                          <div class="col">
+
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    
+                
+                </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
