@@ -1,0 +1,53 @@
+{% extends "home/layout.html" %}
+{% block title %}
+About page
+{% endblock %}
+{% block content %}
+<div class="about-page">
+
+                <div class="para"> <p>Hello there! I'm Paul Okweso, a passionate, <br>dedicated, and enthusiastic software <br>developer
+                         with a love for turning ideas<br> into functional and user-friendly applications.<br> 
+                         I thrive on challenges and am always<br> eager to learn and explore new technologies.</p><br>
+                         <h3>Who am I?</h3>
+                         <p>I am a software developer with two<br> years of experience in 
+                         languages<br> and technologies listed below. 
+                         My journey<br> in the world of coding began as a result of<br> curiosity to understand how websites work.<br>
+                         I've always been the type to take things<br> apart to understand how they work.<br>
+                         Coding, for me, was an extension of that<br> curiosity—dissecting and building digital<br> systems 
+                         to comprehend the magic <br>happening behind the scenes
+                         Since then,<br> I have had the privilege of working on<br> a diverse range of projects.</p><br>
+                         <h3>What sets me apart?</h3>
+                         <p>I take pride in my ability to translate complex<br> ideas into clean, efficient, and<br> scalable code. 
+                         My commitment to writing<br> maintainable and well-documented software<br> ensures that my creations 
+                         stand the test of time.<br> I am always exploring new tools and methodologies<br> to stay at the 
+                         forefront of technology<br> trends, and I am not afraid to dive<br> into unfamiliar territories 
+                         to expand my skill set.</p><br>
+                         <h3>My Approach</h3>
+                         <p>I believe in collaboration and communication.<br> Understanding the unique needs of clients<br>
+                         and end-users is at the core of my<br> development process. By combining <br>technical expertise 
+                         with a user-centric mindset,<br> I strive to create software solutions<br> 
+                         that not only meet but exceed expectations.</p><br>
+                         <h3>What drives me?</h3>
+                         <p>Beyond the lines of code, I am driven<br> by the impact that technology can have<br> on people's lives. 
+                         Whether it's simplifying<br> a complex process, enhancing user experiences,<br> or solving real-world problems,<br> 
+                         I find fulfillment in knowing that my<br> work makes a positive difference.</p>
+
+                
+                </div>
+ 
+                        
+                        <div class="skills">
+                                <h2>My Technical Skillset</h2>
+                                {% for key, value in my_skills.items %}
+                                <div class="card">
+                                        <div class=""><h5>{{key}}</h5></div>
+                                        <div class="">
+                                        <p class="card-text">{{value}}</p>
+                                        </div>
+                                </div>
+                                    
+                                {% endfor %}
+                        </div>
+                </div>
+                                
+{% endblock %}

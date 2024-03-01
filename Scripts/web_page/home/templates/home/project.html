@@ -1,0 +1,23 @@
+{% extends "home/layout.html" %}
+{% block title %}
+projects page
+{% endblock %}
+{% block content %}
+<div class="projects-page">
+    <p class="paragraph">I am committed to making the world a better place with technology. The following are some of the projects I have worked on in the past.</p>
+        {% for x in data %}
+            <div class="projects" style="width: 20rem; margin: 30px;">
+                <img src="{{ x.photo.url }}" class="" alt="...">
+                <div class="">
+                <h5 class="card-title">{{x.name}}</h5>
+                <p class="">{{x.describe}}</p>
+                <a href="{{x.link}}" class="">View Project</a>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+
+      
+
+
+{% endblock %}

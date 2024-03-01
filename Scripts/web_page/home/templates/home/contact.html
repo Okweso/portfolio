@@ -1,0 +1,25 @@
+{% extends "home/layout.html" %}
+{% block title %}
+Contact
+{% endblock %}
+{% block content %}
+<div class="contact-page">
+  <div class="send-email">
+{% load widget_tweaks %}
+<form class="form11" id="" method="post" action ="" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>{% render_field form.from_email placeholder="Please enter your email" id="from_email" class="email1-field" %}</div>
+    <div >{% render_field form.subject placeholder="Please input the subject" id="sub" class="email1-field" %}</div>
+    <div >{% render_field form.message placeholder="Please enter your message" id="message" %}</div>
+
+    <div>
+        <button type="submit" id="btn22" onclick="">Send</button>
+    </div>
+</form> 
+  </div>
+<div>
+  <a class="call-btn" style="padding: 10px;" href="tel:{{ +254717836655 }}">Call me</a>
+</div>
+</div>
+
+{% endblock %}

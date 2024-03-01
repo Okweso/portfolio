@@ -1,0 +1,35 @@
+{% extends "home/layout.html" %}
+{% block title %}
+home page
+{% endblock %}
+{% block content %}
+<div class="home-content">
+<div class="top">
+ {% for y in my_icon %}
+    <div class="icon"><img src="{{ y.call_icon.url }}"></div>
+{% endfor %}
+</div>
+
+<div class="home-content-image">
+    <div class="home_page">
+        {% for x in Mydetails %}
+        <div id="description">Hi, I am {{ x.my_name }}.<br>I am a software developer</div>
+        {% for doc in my_doc %}
+            <div id="cv"><a href="{{ doc.file.url }}"> my resume</a></div>
+        {% endfor %}
+        </div>
+
+
+{% if x.my_image %}
+    <div class="image"><img src="{{ x.my_image.url }}"  style="width: 400px; height: 600px;"></div>
+{% else %}:
+    <p>the image does not exist</p>
+{% endif %}
+</div>
+
+{% endfor %}
+</div>
+
+                
+{% endblock %}
+        
